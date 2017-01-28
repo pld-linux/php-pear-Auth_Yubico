@@ -16,10 +16,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.610
 Requires:	php-pear
 BuildArch:	noarch
-
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_sysconfdir	%(pear config-get cfg_dir 2>/dev/null || ERROR)/%{pearname}
 
 %description
 PHP class to help you verify Yubico OTP tokens.
@@ -44,19 +41,8 @@ install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%if 0%{?_noautoreq:1}
-%post -p <lua>
-%pear_package_print_optionalpackages
-%endif
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog install.log
-%if 0%{?_noautoreq:1}
-%doc optional-packages.txt
-%endif
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/Auth/Yubico.php
-
-
-
