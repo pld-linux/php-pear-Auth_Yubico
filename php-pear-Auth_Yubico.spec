@@ -21,11 +21,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	%(pear config-get cfg_dir 2>/dev/null || ERROR)/%{pearname}
 
-%if "" != ""
-# exclude optional dependencies
-%define		_noautoreq
-%endif
-
 %description
 PHP class to help you verify Yubico OTP tokens.
 
@@ -35,7 +30,7 @@ In PEAR status of this package is: %{status}.
 %setup -q -n Auth_Yubico-%{version}
 %define builddir $(pwd)
 %pear_install
-cat %{-z:$_N/}.install.log | %__pear_install_log
+cat .install.log | %__pear_install_log
 %undos -f php,html,js,xml
 
 %build
