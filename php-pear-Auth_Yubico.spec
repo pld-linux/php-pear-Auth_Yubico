@@ -2,6 +2,7 @@
 %define		pearname	Auth_Yubico
 %include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Authentication class for verifying Yubico OTP tokens
+Summary(pl.UTF-8):	%{pearname} - klasa uwierzytelniająca do weryfikowania tokenów OTP Yubico
 Name:		php-pear-Auth_Yubico
 Version:	2.5
 Release:	1
@@ -22,6 +23,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PHP class to help you verify Yubico OTP tokens.
 
 In PEAR status of this package is: %{status}.
+
+%description -l pl.UTF-8
+Klasa PHP pomagająca weryfikować tokeny OTP Yubico.
+
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %setup -q -n Auth_Yubico-%{version}
@@ -44,5 +50,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog install.log
-%{php_pear_dir}/.registry/*.reg
+%{php_pear_dir}/.registry/auth_yubico.reg
 %{php_pear_dir}/Auth/Yubico.php
