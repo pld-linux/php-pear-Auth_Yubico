@@ -4,12 +4,12 @@
 Summary:	%{pearname} - Authentication class for verifying Yubico OTP tokens
 Summary(pl.UTF-8):	%{pearname} - klasa uwierzytelniająca do weryfikowania tokenów OTP Yubico
 Name:		php-pear-Auth_Yubico
-Version:	2.5
+Version:	2.6
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
 Source0:	https://developers.yubico.com/php-yubico/Releases/Auth_Yubico-%{version}.tgz
-# Source0-md5:	955f8330a5e030904394c6892d09a4c4
+# Source0-md5:	bfd284b96166c2122006623024faf26c
 URL:		https://developers.yubico.com/php-yubico/
 BuildRequires:	php-packagexml2cl
 BuildRequires:	php-pear-PEAR
