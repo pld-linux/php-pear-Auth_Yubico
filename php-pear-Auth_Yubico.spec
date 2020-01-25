@@ -1,6 +1,5 @@
 %define		status		alpha
 %define		pearname	Auth_Yubico
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - Authentication class for verifying Yubico OTP tokens
 Summary(pl.UTF-8):	%{pearname} - klasa uwierzytelniająca do weryfikowania tokenów OTP Yubico
 Name:		php-pear-Auth_Yubico
